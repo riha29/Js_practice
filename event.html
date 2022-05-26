@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event checker </title>
+</head>
+<body>
+    <!-- <h3>
+        amra korbo joy ekdin!!
+    </h3>
+    <button onclick="normalMe()"> normal mood</button>
+    <button onclick="darkMe()"> Dark mood</button> -->
+    
+    <input id="name-field">
+    <button id="updating">
+        update
+    </button>
+
+    <p id="clicking-method" ></p>
+    <button onclick="handleJustFunctionClick()">
+        Just function
+    </button>
+    
+    
+    <button id="handle-event">
+        Direct add event listener
+    </button>
+
+
+    <script >
+    //    direct 
+    document.getElementById('handle-event').addEventListener('click', function() {
+        const p = document.getElementById('clicking-method')
+        p.innerText= 'set by using direct addd'
+    })
+
+    document.getElementById('updating').addEventListener('click', function() {
+        const a = document.getElementById('name-field')
+        const pw = document.getElementById('clicking-method')
+        pw.innerText = a.value
+        // console.log(a.value)
+    })
+    </script>
+</body>
+</html>
